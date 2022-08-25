@@ -16,6 +16,7 @@ const FieldTile: React.FC<FieldTileProps> = (props) => {
         background: `url(/sprites.png) ${spriteX}px ${spriteY}px`,
         backgroundColor: props.isSelected ? "#000" : undefined
       }}
+      onClick={props.onClick}
     ></div>
   );
 };
