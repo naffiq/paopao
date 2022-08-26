@@ -8,6 +8,9 @@
     "static/js/2.eb6b59e3.chunk.js": "/paopao/static/js/2.eb6b59e3.chunk.js",
     "static/js/2.eb6b59e3.chunk.js.map": "/paopao/static/js/2.eb6b59e3.chunk.js.map",
     "index.html": "/paopao/index.html",
+    "service-worker.js": "/paopao/service-worker.js",
+    "service-worker.js.LICENSE.txt": "/paopao/service-worker.js.LICENSE.txt",
+    "service-worker.js.map": "/paopao/service-worker.js.map",
     "static/css/main.12c1305a.chunk.css.map": "/paopao/static/css/main.12c1305a.chunk.css.map",
     "static/js/2.eb6b59e3.chunk.js.LICENSE.txt": "/paopao/static/js/2.eb6b59e3.chunk.js.LICENSE.txt"
   },
