@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/paopao/static/css/main.12c1305a.chunk.css",
-    "main.js": "/paopao/static/js/main.fba90808.chunk.js",
-    "main.js.map": "/paopao/static/js/main.fba90808.chunk.js.map",
+    "main.js": "/paopao/static/js/main.f2f10753.chunk.js",
+    "main.js.map": "/paopao/static/js/main.f2f10753.chunk.js.map",
     "runtime-main.js": "/paopao/static/js/runtime-main.d3e6c2eb.js",
     "runtime-main.js.map": "/paopao/static/js/runtime-main.d3e6c2eb.js.map",
     "static/js/2.eb6b59e3.chunk.js": "/paopao/static/js/2.eb6b59e3.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.d3e6c2eb.js",
     "static/js/2.eb6b59e3.chunk.js",
     "static/css/main.12c1305a.chunk.css",
-    "static/js/main.fba90808.chunk.js"
+    "static/js/main.f2f10753.chunk.js"
   ]
 }
