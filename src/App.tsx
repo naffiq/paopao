@@ -16,7 +16,7 @@ export default function App() {
     setHasWon(true);
   });
 
-  const [hasWon, setHasWon] = useState(true);
+  const [hasWon, setHasWon] = useState(false);
 
   return (
     <div
