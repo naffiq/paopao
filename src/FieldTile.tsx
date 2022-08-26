@@ -39,7 +39,7 @@ const FieldTile: React.FC<FieldTileProps> = (props) => {
         height: "60px",
         background: props.isSolved
           ? undefined
-          : `url(/sprites.png) ${spriteX}px ${spriteY}px`,
+          : `url(${process.env.PUBLIC_URL}/sprites.png) ${spriteX}px ${spriteY}px`,
         backgroundColor,
         borderTop: "1px solid " + darkBorderColor,
         borderRight: "1px solid " + darkBorderColor,
