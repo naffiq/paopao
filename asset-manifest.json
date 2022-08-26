@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/paopao/static/css/main.12c1305a.chunk.css",
-    "main.js": "/paopao/static/js/main.32681395.chunk.js",
-    "main.js.map": "/paopao/static/js/main.32681395.chunk.js.map",
+    "main.js": "/paopao/static/js/main.d027f250.chunk.js",
+    "main.js.map": "/paopao/static/js/main.d027f250.chunk.js.map",
     "runtime-main.js": "/paopao/static/js/runtime-main.d3e6c2eb.js",
     "runtime-main.js.map": "/paopao/static/js/runtime-main.d3e6c2eb.js.map",
-    "static/js/2.5ac2b643.chunk.js": "/paopao/static/js/2.5ac2b643.chunk.js",
-    "static/js/2.5ac2b643.chunk.js.map": "/paopao/static/js/2.5ac2b643.chunk.js.map",
+    "static/js/2.eb6b59e3.chunk.js": "/paopao/static/js/2.eb6b59e3.chunk.js",
+    "static/js/2.eb6b59e3.chunk.js.map": "/paopao/static/js/2.eb6b59e3.chunk.js.map",
     "index.html": "/paopao/index.html",
     "static/css/main.12c1305a.chunk.css.map": "/paopao/static/css/main.12c1305a.chunk.css.map",
-    "static/js/2.5ac2b643.chunk.js.LICENSE.txt": "/paopao/static/js/2.5ac2b643.chunk.js.LICENSE.txt"
+    "static/js/2.eb6b59e3.chunk.js.LICENSE.txt": "/paopao/static/js/2.eb6b59e3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d3e6c2eb.js",
-    "static/js/2.5ac2b643.chunk.js",
+    "static/js/2.eb6b59e3.chunk.js",
     "static/css/main.12c1305a.chunk.css",
-    "static/js/main.32681395.chunk.js"
+    "static/js/main.d027f250.chunk.js"
   ]
 }
