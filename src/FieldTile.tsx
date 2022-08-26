@@ -16,8 +16,8 @@ const FieldTile: React.FC<FieldTileProps> = ({
   const tileSize = Math.min(
     Math.floor(
       Math.min(
-        (window.outerWidth - DIMENSIONS_X * 4) / DIMENSIONS_X,
-        window.outerHeight / DIMENSIONS_Y
+        (window.innerWidth - DIMENSIONS_X * 4) / DIMENSIONS_X,
+        window.innerHeight / DIMENSIONS_Y
       )
     ),
     60
