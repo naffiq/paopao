@@ -1,7 +1,8 @@
 {
   "name": "paopao",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://naffiq.github.io/paopao",
+  "description": "Clone of a popular game made with React and Typescript",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
@@ -12,13 +13,16 @@
   "devDependencies": {
     "@types/react": "17.0.20",
     "@types/react-dom": "^17.0.9",
+    "gh-pages": "^4.0.0",
     "typescript": "4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
