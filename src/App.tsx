@@ -40,7 +40,7 @@ export default function App() {
           justifyContent: "space-between",
         }}
       >
-        <h1>PaoPao {couplesFound}/72</h1>
+        <h1 style={{ color: "white" }}>PaoPao {couplesFound}/72</h1>
         <button onClick={onShowHint}>Show hint</button>
       </div>
       <div>

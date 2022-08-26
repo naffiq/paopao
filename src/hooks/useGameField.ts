@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { FieldTile, GameField, Directions } from "../types/GameField";
 
-const DIMENSIONS_Y = window.outerWidth > window.outerHeight ? 9 : 16;
-const DIMENSIONS_X = window.outerWidth > window.outerHeight ? 16 : 9;
+export const DIMENSIONS_Y = window.outerWidth > window.outerHeight ? 9 : 16;
+export const DIMENSIONS_X = window.outerWidth > window.outerHeight ? 16 : 9;
 const POKEMON_COUNT = 36;
 
 type Coords = {
