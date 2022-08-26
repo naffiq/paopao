@@ -4,6 +4,7 @@ import { FieldTile, GameField, Directions } from "../types/GameField";
 export const DIMENSIONS_Y = window.outerWidth > window.outerHeight ? 9 : 16;
 export const DIMENSIONS_X = window.outerWidth > window.outerHeight ? 16 : 9;
 const POKEMON_COUNT = 36;
+const FIELD_STORAGE_KEY = "paopao-field";
 
 type Coords = {
   x: number;
@@ -27,10 +28,24 @@ const generateMap: () => GameField = () => {
   );
 };
 
+const storedFieldString = localStorage.getItem(FIELD_STORAGE_KEY);
+const initialField =
+  storedFieldString !== null ? JSON.parse(storedFieldString) : generateMap();
+
+const countSolvedTiles = (gameField: GameField) => {
+  let count = 0;
+  gameField.forEach((row) =>
+    row.forEach((card) => (count += card.isSolved ? 1 : 0))
+  );
+  return count / 2;
+};
+
 export const useGameField = (onWin: () => void) => {
-  const [gameField, setGameField] = useState<GameField>(generateMap());
+  const [gameField, setGameField] = useState<GameField>(initialField);
   const [showHint, setShowHint] = useState(false);
-  const [couplesFound, setCouplesFound] = useState(0);
+  const [couplesFound, setCouplesFound] = useState(
+    countSolvedTiles(initialField)
+  );
 
   const [tile1Coords, setTile1Coords] = useState<Coords | undefined>(undefined);
   const [tile2Coords, setTile2Coords] = useState<Coords | undefined>(undefined);
@@ -115,6 +130,7 @@ export const useGameField = (onWin: () => void) => {
     }
 
     setGameField(updatedField);
+    localStorage.setItem(FIELD_STORAGE_KEY, JSON.stringify(updatedField));
   };
 
   /**

@@ -1,5 +1,5 @@
 import "./styles.css";
-import FieldTile from "./FieldTile";
+import FieldTile from "./components/FieldTile";
 import { useGameField } from "./hooks/useGameField";
 import { useState } from "react";
 import WinModal from "./components/WinModal";
