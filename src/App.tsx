@@ -1,6 +1,8 @@
 import "./styles.css";
 import FieldTile from "./FieldTile";
 import { useGameField } from "./hooks/useGameField";
+import { useState } from "react";
+import WinModal from "./components/WinModal";
 
 export default function App() {
   const {
@@ -9,8 +11,12 @@ export default function App() {
     existingSolution,
     onShowHint,
     showHint,
-    onFieldShuffle,
-  } = useGameField();
+    couplesFound,
+  } = useGameField(() => {
+    setHasWon(true);
+  });
+
+  const [hasWon, setHasWon] = useState(true);
 
   return (
     <div
@@ -20,7 +26,8 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        maxWidth: "1024",
+        margin: "0 auto",
+        maxWidth: "1024px",
         flexDirection: "column",
         caretColor: "transparent",
       }}
@@ -33,9 +40,7 @@ export default function App() {
           justifyContent: "space-between",
         }}
       >
-        <h1>
-          PaoPao - {existingSolution ? "Solution exists" : "Nah man, give up"}
-        </h1>
+        <h1>PaoPao {couplesFound}/72</h1>
         <button onClick={onShowHint}>Show hint</button>
       </div>
       <div>
@@ -63,6 +68,7 @@ export default function App() {
           </div>
         ))}
       </div>
+      <WinModal show={hasWon} onOk={() => setHasWon(false)} />
     </div>
   );
 }

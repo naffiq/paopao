@@ -5,23 +5,28 @@ type FieldTileProps = FieldTileType & {
   highlighted: boolean;
 };
 
-const FieldTile: React.FC<FieldTileProps> = (props) => {
-  const spriteX = Math.floor(props.cardType % 6) * 60;
-  const spriteY = Math.floor(props.cardType / 6) * 60;
+const FieldTile: React.FC<FieldTileProps> = ({
+  cardType,
+  isSelected,
+  isSolved,
+  onClick,
+  highlighted,
+}) => {
+  const spriteX = Math.floor(cardType % 6) * 60;
+  const spriteY = Math.floor(cardType / 6) * 60;
 
   const getColor = (
     selectedColor: string,
     normalColor: string,
     highlightedColor: string
   ) => {
-    console.log(props);
-    if (props.isSolved) {
+    if (isSolved) {
       return "transparent";
     }
-    if (props.isSelected) {
+    if (isSelected) {
       return selectedColor;
     }
-    if (props.highlighted) {
+    if (highlighted) {
       return highlightedColor;
     }
 
@@ -37,16 +42,17 @@ const FieldTile: React.FC<FieldTileProps> = (props) => {
       style={{
         width: "60px",
         height: "60px",
-        background: props.isSolved
+        background: isSolved
           ? undefined
           : `url(${process.env.PUBLIC_URL}/sprites.png) ${spriteX}px ${spriteY}px`,
         backgroundColor,
-        borderTop: "1px solid " + darkBorderColor,
-        borderRight: "1px solid " + darkBorderColor,
-        borderBottom: "1px solid " + lightBorderColor,
-        borderLeft: "1px solid " + lightBorderColor,
+        borderTop: "2px solid " + darkBorderColor,
+        borderRight: "2px solid " + darkBorderColor,
+        borderBottom: "2px solid " + lightBorderColor,
+        borderLeft: "2px solid " + lightBorderColor,
+        cursor: isSolved ? "default" : "pointer",
       }}
-      onClick={() => props.onClick()}
+      onClick={() => onClick()}
     ></div>
   );
 };
