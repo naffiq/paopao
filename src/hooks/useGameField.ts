@@ -118,6 +118,7 @@ export const useGameField = (onWin: () => void) => {
 
       if (couplesFound === (DIMENSIONS_X * DIMENSIONS_Y) / 2 - 1) {
         updatedField = generateMap();
+        setCouplesFound(0);
         onWin();
       }
       let updatedSolution = getExistingSolutions(updatedField);
@@ -134,12 +135,14 @@ export const useGameField = (onWin: () => void) => {
   };
 
   /**
-   * Check if tiles can be solved by finding the shortest path between them in terms of turns to be made.
+   * Check if tiles can be solved by finding the shortest path between them in terms of turns to be ma
+   * @param gameField   The data with game pointsde.
    * @param tile1Coords Coordinates of the first tile on the field in the state
    * @param tile2Coords Coordinates of the second tile on the field in the state
    * @returns
    */
   const canCrossTiles = (
+ gameField: GameField,
     { x: x1, y: y1 }: Coords,
     { x: x2, y: y2 }: Coords
   ) => {
@@ -242,7 +245,7 @@ export const useGameField = (onWin: () => void) => {
 
       const isSolved =
         tile1.cardType === tile2.cardType &&
-        canCrossTiles(tile1Coords, tile2Coords);
+        canCrossTiles(gameField, tile1Coords, tile2Coords);
 
       setTimeout(() => {
         unsetSelectedTiles(isSolved);
@@ -271,7 +274,7 @@ export const useGameField = (onWin: () => void) => {
       });
       for (let coordA = 0; coordA < coords.length - 1; coordA++) {
         for (let coordB = coordA + 1; coordB < coords.length; coordB++) {
-          if (canCrossTiles(coords[coordA], coords[coordB])) {
+          if (canCrossTiles(gameField, coords[coordA], coords[coordB])) {
             return [coords[coordA], coords[coordB]];
           }
         }
